@@ -9,8 +9,6 @@ import fs from "fs";
 import { fileURLToPath } from "url";
 
 
-
-
 import reportRoutes from "./routes/reportRoutes.js";
 import resourceRoutes from "./routes/resourceRoutes.js";
 
@@ -63,7 +61,9 @@ mongoose
 
 
 
-
 // Start server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+// app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server running on http://172.16.13.40:${PORT}`);
+});

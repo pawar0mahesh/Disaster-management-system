@@ -36,7 +36,7 @@ export default function Home() {
                     <i className="fas fa-exclamation-circle me-2"></i>
                     Submit Emergency Report
                   </Link>
-                  <Link to="/alerts" className="btn btn-warning btn-lg px-4 py-3 fw-semibold">
+                  <Link to="/dashboard" className="btn btn-warning btn-lg px-4 py-3 fw-semibold">
                     <i className="fas fa-bell me-2"></i>
                     View Alerts
                   </Link>
@@ -89,13 +89,18 @@ export default function Home() {
             </p>
           </div>
 
+
+        
           <div className="row g-4">
             <div className="col-md-6 col-lg-4">
               <div className="feature-card card h-100 border-0 shadow-lg hover-shadow">
                 <div className="card-body text-center p-4">
+                 <Link to={"/dashboard"}>
                   <div className="feature-icon bg-primary bg-gradient rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
                     <i className="fas fa-bell text-white fs-4"></i>
                   </div>
+                 </Link>
+                 
                   <h5 className="card-title fw-semibold">Real-time Alerts</h5>
                   <p className="card-text text-muted">
                     Receive instant notifications for floods, landslides, cloudbursts, and avalanches with location-specific warnings.
@@ -121,9 +126,13 @@ export default function Home() {
             <div className="col-md-6 col-lg-4">
               <div className="feature-card card h-100 border-0 shadow-lg hover-shadow">
                 <div className="card-body text-center p-4">
+                 
+                 <Link to={"/resourcelist"}>
                   <div className="feature-icon bg-warning bg-gradient rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
                     <i className="fas fa-hospital text-white fs-4"></i>
                   </div>
+                 </Link>
+                 
                   <h5 className="card-title fw-semibold">Nearest Resources</h5>
                   <p className="card-text text-muted">
                     Locate nearby hospitals, shelters, rescue centers, and emergency contacts with directions.
@@ -150,9 +159,13 @@ export default function Home() {
             <div className="col-md-6 col-lg-4">
               <div className="feature-card card h-100 border-0 shadow-lg hover-shadow">
                 <div className="card-body text-center p-4">
+                  
+                  <Link to={"/report"}>
                   <div className="feature-icon bg-danger bg-gradient rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
                     <i className="fas fa-users text-white fs-4"></i>
                   </div>
+                  </Link>
+                  
                   <h5 className="card-title fw-semibold">Community Reports</h5>
                   <p className="card-text text-muted">
                     Share and verify incidents with community-driven reporting system.

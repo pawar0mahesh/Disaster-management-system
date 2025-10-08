@@ -6,6 +6,8 @@ import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Dashboard from './pages/Dashboard'
 import Report from './pages/Report'
+import ResourcePage from "./pages/ResourcePage";
+
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/dashboard" element={<Dashboard/>}/>
           <Route path="/report" element={<Report />} />
+            <Route path="/resourcelist" element={<ResourcePage />} />
         </Routes>
    
     </Router>
