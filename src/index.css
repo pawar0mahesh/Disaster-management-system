@@ -1,0 +1,8 @@
+/* Leaflet CSS for maps */
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+
+/* Your existing styles below */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
