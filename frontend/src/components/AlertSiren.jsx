@@ -12,12 +12,10 @@ const AlertSiren = () => {
     audioRef.current.loop = true;
 
     if (playing) {
-      // STOP the siren
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
       setPlaying(false);
     } else {
-      // PLAY the siren
       audioRef.current
         .play()
         .then(() => setPlaying(true))

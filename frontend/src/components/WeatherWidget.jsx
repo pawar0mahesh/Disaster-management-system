@@ -8,7 +8,6 @@ const WeatherWidget = () => {
   const API_KEY = "d7bf4b47b9f0fabbb988b04909356c16"; // Replace with your key
 
   useEffect(() => {
-    // Get user location
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         const { latitude, longitude } = position.coords;

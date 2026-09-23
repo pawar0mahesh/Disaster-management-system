@@ -1,4 +1,3 @@
-// backend/controllers/resourceController.js
 const Resource = require('../models/Resource');
 
 function normalizeLocation(location) {
@@ -27,7 +26,6 @@ exports.getResources = async (req, res, next) => {
   } catch (err) { next(err); }
 };
 
-// GET /api/resources/nearby?lat=..&lng=..&radius=5000
 exports.getNearbyResources = async (req, res, next) => {
   try {
     const { lat, lng, radius = 5000 } = req.query;

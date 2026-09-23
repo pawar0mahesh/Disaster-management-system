@@ -74,15 +74,15 @@ const ResourceList = () => {
         <div className="row g-4">
           {resources.map((r) => (
             <div key={r._id} className="col-12 col-md-6 col-lg-4">
-              <div className="card shadow-sm h-100 border-0 rounded-4">
-                <div className="card-body">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="me-3">{getTypeIcon(r.type)}</div>
-                    <div>
-                      <h5 className="card-title mb-1 fw-bold">{r.name}</h5>
+          <div className="card shadow-sm h-100 border-0 rounded-4">
+             <div className="card-body">
+            <div className="d-flex align-items-center mb-3">
+                 <div className="me-3">{getTypeIcon(r.type)}</div>
+              <div>
+                    <h5 className="card-title mb-1 fw-bold">{r.name}</h5>
                       <span
-                        className={`badge text-bg-${
-                          r.type === "Hospital"
+                       className={`badge text-bg-${
+                         r.type === "Hospital"
                             ? "danger"
                             : r.type === "Shelter"
                             ? "warning"
@@ -98,27 +98,27 @@ const ResourceList = () => {
 
                   <ul className="list-unstyled mb-0">
                     <li className="mb-2">
-                      <FaMapMarkerAlt className="me-2 text-primary" />
-                      <strong>Address:</strong> {r.address || "Not available"}
+                     <FaMapMarkerAlt className="me-2 text-primary" />
+                     <strong>Address:</strong> {r.address || "Not available"}
                     </li>
-                    <li className="mb-2">
-                      <FaPhoneAlt className="me-2 text-success" />
+                   <li className="mb-2">
+                     <FaPhoneAlt className="me-2 text-success" />
                       <strong>Contact:</strong> {r.contact || "N/A"}
-                    </li>
-                    <li className="mb-2">
-                      <FaBed className="me-2 text-info" />
+                  </li>
+                   <li className="mb-2">
+                     <FaBed className="me-2 text-info" />
                       <strong>Beds:</strong> {r.availableBeds}
-                    </li>
+                   </li>
                     <li>
-                      <FaUsers className="me-2 text-secondary" />
-                      <strong>Rescue Teams:</strong> {r.availableRescueTeams}
-                    </li>
+                     <FaUsers className="me-2 text-secondary" />
+                     <strong>Rescue Teams:</strong> {r.availableRescueTeams}
+                 </li>
                   </ul>
-                </div>
-              </div>
+             </div>
+             </div>
             </div>
           ))}
-        </div>
+       </div>
       )}
     </div>
   );

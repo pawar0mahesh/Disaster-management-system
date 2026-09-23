@@ -20,7 +20,6 @@ const ResourceSchema = new mongoose.Schema({
   availableRescueTeams: { type: Number, default: 0 }
 });
 
-// Enable geospatial search
 ResourceSchema.index({ location: "2dsphere" });
 
 const Resource = mongoose.model("Resource", ResourceSchema);

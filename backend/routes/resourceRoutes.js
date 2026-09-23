@@ -3,7 +3,6 @@ import Resource from "../models/Resource.js";
 
 const router = express.Router();
 
-// ➕ Add a new resource
 router.post("/", async (req, res) => {
   try {
     const { name, type, address, contact, location, availableBeds, availableRescueTeams } = req.body;
@@ -30,7 +29,6 @@ router.post("/", async (req, res) => {
   }
 });
 
-// 📋 Get all resources
 router.get("/", async (req, res) => {
   try {
     const resources = await Resource.find();
@@ -40,7 +38,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// 📍 Get nearby resources (query: ?lng=..&lat=..&radius=..)
 router.get("/nearby", async (req, res) => {
   const { lng, lat, radius = 5 } = req.query; // default radius 5 km
 

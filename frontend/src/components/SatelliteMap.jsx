@@ -21,7 +21,7 @@ const SatelliteMap = () => {
 
       <MapContainer center={[30.0668, 79.0193]} zoom={6} style={{ height: "100%" }}>
         <LayersControl position="topright">
-          {/* Base OpenStreetMap */}
+        
           <BaseLayer checked name="Street Map">
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -29,7 +29,7 @@ const SatelliteMap = () => {
             />
           </BaseLayer>
 
-          {/* NASA GIBS Satellite True Color */}
+         
           <BaseLayer name="NASA True Color">
             <TileLayer
               url={`https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/${date}/{z}/{y}/{x}.jpg`}
@@ -39,7 +39,7 @@ const SatelliteMap = () => {
             />
           </BaseLayer>
 
-          {/* NASA Fires Layer */}
+         
           <Overlay name="Active Fires (MODIS)">
             <TileLayer
               url={`https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_Thermal_Anomalies_Day/default/${date}/{z}/{y}/{x}.png`}
@@ -48,7 +48,7 @@ const SatelliteMap = () => {
             />
           </Overlay>
 
-          {/* OpenWeather Overlays */}
+          
           <Overlay checked name="Clouds (OpenWeather)">
             <TileLayer
               url={`https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=${API_KEY}`}

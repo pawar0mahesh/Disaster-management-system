@@ -18,7 +18,7 @@ export default function Navbar() {
           <small className="ms-2 badge bg-light text-primary fs-6">Uttarakhand</small>
         </Link>
 
-        {/* Mobile Toggle Button */}
+       
         <button 
           className="navbar-toggler" 
           type="button" 
@@ -31,7 +31,6 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navigation Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item mx-1">
@@ -67,7 +66,7 @@ export default function Navbar() {
               </Link>
             </li>
 
-            {/* Emergency Alert Badge */}
+          
             <li className="nav-item mx-1">
               <div className="nav-link">
                 <span className="badge bg-danger bg-gradient animate-pulse">
@@ -83,9 +82,9 @@ export default function Navbar() {
           
           </ul>
 
-          {/* Additional Actions */}
+         
           <div className="d-flex align-items-center ms-lg-3 mt-2 mt-lg-0">
-            {/* Language Selector */}
+         
             <div className="dropdown me-2">
               <button 
                 className="btn btn-outline-light btn-sm dropdown-toggle" 
@@ -104,7 +103,6 @@ export default function Navbar() {
               </ul>
             </div>
 
-            {/* Emergency Help Button */}
             <Link to="/report" className="btn btn-danger btn-sm">
               <i className="fas fa-phone-alt me-1"></i>
               Emergency Help
@@ -113,7 +111,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Active Link Indicator Style */}
+
       <style jsx>{`
         .nav-link.active {
           background: rgba(255, 255, 255, 0.15);

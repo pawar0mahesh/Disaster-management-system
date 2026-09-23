@@ -1,8 +1,8 @@
 const Report = require('../models/Report');
 
-// helper to normalize location input
+
 function normalizeLocation(location) {
-  // accept { lat, lng } or [lng, lat] or { coordinates: [lng, lat] }
+
   if (!location) return null;
   if (Array.isArray(location)) return { type: 'Point', coordinates: location };
   if (location.lng !== undefined && location.lat !== undefined) return { type: 'Point', coordinates: [Number(location.lng), Number(location.lat)] };
@@ -41,7 +41,6 @@ exports.getReportById = async (req, res, next) => {
   } catch (err) { next(err); }
 };
 
-// GET /api/reports/nearby?lat=..&lng=..&radius=5000
 exports.getNearbyReports = async (req, res, next) => {
   try {
     const { lat, lng, radius = 5000 } = req.query;
